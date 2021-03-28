@@ -6,7 +6,7 @@ def solution(x):
     else: return True
 
 #------------------------#
-#single line 
+#myself-single line 
 def solution_SingleLine(x):
     return x % sum(int(i) for i in list(str(x))) == 0
     
