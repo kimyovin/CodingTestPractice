@@ -19,3 +19,7 @@ def solution(N, stages):
     return answer
 
 #https://programmers.co.kr/learn/courses/30/lessons/42889
+'''
+1. sorted(dict, key = lambda x: dict[x])에서 
+    첫번째 인자인 dict은 dict.keys()와 같다.
+'''
