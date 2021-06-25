@@ -1,5 +1,8 @@
 -- https://programmers.co.kr/learn/courses/30/lessons/59405
+#sol 1
+select NAME FROM ANIMAL_INS ORDER BY DATETIME LIMIT 1;
 
+#sol 2
 SELECT NAME FROM 
 (SELECT RANK() OVER (ORDER BY DATETIME) as RANKING, NAME FROM ANIMAL_INS ) c
 WHERE RANKING = 1;
