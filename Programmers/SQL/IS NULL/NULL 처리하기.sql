@@ -23,4 +23,6 @@ SELECT ANIMAL_TYPE, if( isnull(NAME), "No name", NAME) , SEX_UPON_INTAKE FROM AN
 4. isnull ( 변수, null일때 값) //only mssql
 
 5. NVL ( 변수, null일때 값) //only oracle
+
+https://programmers.co.kr/learn/courses/30/lessons/59410
 */
