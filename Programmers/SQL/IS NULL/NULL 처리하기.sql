@@ -1,3 +1,4 @@
+# 1번째 풀이<if( 조건문, true, false )>
 SELECT ANIMAL_TYPE, if( isnull(NAME), "No name", NAME) , SEX_UPON_INTAKE FROM ANIMAL_INS order by ANIMAL_ID
 
 -- or SELECT ANIMAL_TYPE, ifnull(NAME, "No name"), SEX_UPON_INTAKE FROM ANIMAL_INS order by ANIMAL_ID
@@ -23,6 +24,12 @@ SELECT ANIMAL_TYPE, if( isnull(NAME), "No name", NAME) , SEX_UPON_INTAKE FROM AN
 4. isnull ( 변수, null일때 값) //only mssql
 
 5. NVL ( 변수, null일때 값) //only oracle
-
-https://programmers.co.kr/learn/courses/30/lessons/59410
 */
+
+# 2번째 풀이< 오라클 NVL(컬럼, null일때 값)을 대체하는 mysql의 IFNULL(NAME, "No name") > 
+SELECT ANIMAL_TYPE, IFNULL(NAME, "No name") AS NAME, SEX_UPON_INTAKE
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID;
+
+# https://programmers.co.kr/learn/courses/30/lessons/59410
+
