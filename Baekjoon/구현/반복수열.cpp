@@ -1,4 +1,50 @@
 #include <iostream>
+#include <cmath>
+
+#define MAX 236197  // 9^5 * 4 +1
+using namespace std;
+
+int A, P;
+int visited[MAX]={0,};
+
+int solution(int A, int P){
+    int time = 1;
+    visited[A] = time;
+    
+    while(1){
+        string nw_s = to_string(A);
+        int nw_n = 0;
+        for(int i = nw_s.size(); i>0; i--){
+            nw_n += pow(nw_s.at(i-1) - '0', P);
+        }
+        
+        A = nw_n;
+        if(visited[A] == 0)
+            visited[A] = ++time;
+        else
+            return visited[A]-1;
+        
+    }
+    
+    return -1;
+}
+
+int main(int argc, const char * argv[]) {
+    // cin,cout 속도향상
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+    
+    cin >> A >> P;
+    cout << solution(A, P)<<endl;
+    
+    return 0;
+}
+
+------------------------------------------------------------
+
+
+
+#include <iostream>
 #include <queue>
 #include <cmath>
 
